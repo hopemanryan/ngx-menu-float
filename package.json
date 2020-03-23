@@ -1,0 +1,27 @@
+{
+  "name": "ngx-menu-float",
+  "version": "0.0.2",
+  "description": "A simple floating nav bar for both mobile and desktop, but mostly mobile",
+  "author": {
+    "name": "Ryan Hoffman",
+    "email": "hopemanryan@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "typscript",
+    "angular-material",
+    "floating-menu"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0",
+    "material-icons": "^0.3.1"
+  },
+  "devDependencies": {
+    "material-icons": "^0.3.1"
+
+  },
+  "private": false
+
+}
