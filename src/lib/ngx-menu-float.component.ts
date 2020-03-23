@@ -14,6 +14,8 @@ export interface IMenuSettings {
 @Component({
   selector: 'ngx-menu-float',
   template: `
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <div class="ngx-floating-toolbar container"
          [ngClass]="{'position-top': settings.position === 'top'}"
          [ngStyle]="{'background-color': settings.backgroundColor  || '#ffffff'}"    >
@@ -28,7 +30,60 @@ export interface IMenuSettings {
       </div>
     </div>
   `,
-  styleUrls: ['main.css']
+
+  styles: [`
+    @import '~material-icons/iconfont/material-icons.css';
+
+    .ngx-floating-toolbar {
+      z-index: 99999999;
+      background-color: #fff;
+    }
+    .ngx-floating-toolbar.container {
+      width: 80vw;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      height: 50px;
+      border-radius: 24px;
+      position: fixed;
+      left: 10vw;
+    }
+    .ngx-floating-toolbar.position-top {
+      top: 1.2rem;
+    }
+    .ngx-floating-toolbar:not(.position-top) {
+      bottom: 1.2rem;
+    }
+    .ngx-floating-toolbar .items-container {
+      display: flex;
+      justify-content: space-around;
+      height: 100%;
+      align-items: center;
+      padding: 0 0;
+    }
+    .ngx-floating-toolbar .items-container .menu-item {
+      overflow: hidden;
+      flex-grow: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ngx-floating-toolbar .items-container .menu-item:last-child {
+      border: none;
+      border-bottom-right-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+    .ngx-floating-toolbar .items-container .menu-item:first-child {
+      border-bottom-left-radius: 24px;
+      border-top-left-radius: 24px;
+    }
+    .ngx-floating-toolbar .items-container .menu-item.selected-menu-item {
+      transition: 0.5s;
+      animation-fill-mode: forwards;
+      animation: ease-in-out;
+    }
+
+
+  `]
   })
 export class NgxMenuFloatComponent implements OnInit {
   @Input() menuItems: IMenuItem[];

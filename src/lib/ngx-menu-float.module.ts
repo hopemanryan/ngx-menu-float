@@ -7,7 +7,7 @@ import {CommonModule} from '@angular/common';
 @NgModule({
   declarations: [NgxMenuFloatComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [NgxMenuFloatComponent]
 })

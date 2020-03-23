@@ -1,4 +1,5 @@
-@import '~material-icons/iconfont/material-icons.scss';
+@import '~material-icons/iconfont/material-icons.css';
+
 .ngx-floating-toolbar {
   z-index: 99999999;
   background-color: #fff;
